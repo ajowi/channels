@@ -11,9 +11,9 @@ use NotificationChannels\BongatechSMSNotification\Exceptions\CouldNotSendNotific
 class BongatechSMSNotificationChannel
 {
     protected $sender_id, $client;
-    public function __construct(BongaTech $client)
+    public function __construct()
     {
-        $this->client = $client;
+        $this->client = new BongaTech(config('services.bongatech.token'), config('services.bongatech.api_version'));
         $this->sender_id = config('services.bongatech.sender_id');
     }
 
@@ -29,13 +29,13 @@ class BongatechSMSNotificationChannel
     {
         $message = $notification->toBongatechSMSNotification($notifiable);
         if (!$recipient = $notifiable->routeNotificationFor('BongatechSMSNotification')) {
-            return $recipient = $message->sms_to;
+            return $recipient = $message->getSmsTo();
         }
 
         $sms = new Sms(
             $this->sender_id,
             $recipient,
-            $message->body,
+            $message->getBody(),
             rand(3,4)
         );
 

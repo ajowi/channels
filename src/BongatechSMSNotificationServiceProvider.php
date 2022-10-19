@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\BongatechSMSNotificationChannel;
+namespace NotificationChannels\BongatechSMSNotification;
 
 use Illuminate\Support\ServiceProvider;
 use BongaTech\Api\BongaTech;

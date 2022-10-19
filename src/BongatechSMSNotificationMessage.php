@@ -6,7 +6,7 @@ use Illuminate\Support\Arr;
 
 class BongatechSMSNotificationMessage
 {
-    protected $body, $sms_to;
+    private $body, $sms_to;
     /**
      * @param string $body
      *
@@ -27,5 +27,23 @@ class BongatechSMSNotificationMessage
     {
         $this->sms_to = $sms_to;
         return $this;
+    }
+
+    /**
+     *
+     * @return $this->sms_to
+     */
+    public function getSmsTo()
+    {
+        return $this->sms_to;
+    }
+
+     /**
+     *
+     * @return $this->body
+     */
+    public function getBody()
+    {
+        return $this->body;
     }
 }

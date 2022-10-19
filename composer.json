@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\BongatechSMSNotification\\Test\\": "tests"
+            "NotificationChannels\\BongatechSMSNotificationChannel\\Test\\": "tests"
         }
     },
     "scripts": {

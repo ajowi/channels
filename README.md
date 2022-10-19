@@ -7,7 +7,7 @@
 [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/laravel-notification-channels/bongatech-sms-notification/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/bongatech-sms-notification/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/bongatech-sms-notification.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/bongatech-sms-notification)
 
-This package makes it easy to send [BongaTech SMS](link to service) notifications with Laravel.
+This package makes it easy to send [BongaTech SMS](https://github.com/BongaTech/PHP-SDK) notifications with Laravel.
 
 
 ## Contents
@@ -37,7 +37,7 @@ You can install the package via composer:
 composer require laravel-notification-channels/bongatech-sms-notification
 ```
 
-This package will register itself automatically with Laravel 5.5 and up trough Package auto-discovery.
+This package will register itself automatically with Laravel 5.5 and up through Package auto-discovery.
 
 ### Manual installation
 
